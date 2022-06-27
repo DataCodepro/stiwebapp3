@@ -29,7 +29,7 @@ def EDA():
             'obstacle_need2':'Obstacle - no need due to no demand for innovation',
             'obstacle_other1':'Obstacle - internal organisational rigidities',
             'obstacle_other2':'Obstacle - inflexible regulations/standards',
-            'obstacle_other3':'Obstacle - limitation of S&T public policies'},axis =1,inplace=True) 
+            'obstacle_other3':'Obstacle - limitation of S&T public policies'},axis =0,inplace=True) 
         st.table(df21)
         if st.checkbox('FACTORS AFFECTING INNOVATION ACTIVITIES CHART'):
             df2 = df[['obstacle_cost1','obstacle_cost2','obstacle_cost3','obstacle_cost4','obstacle_cost5','obstacle_knowledge1','obstacle_knowledge2','obstacle_knowledge3','obstacle_knowledge4','obstacle_market1','obstacle_market2','obstacle_market3','obstacle_market4','obstacle_market5','obstacle_infra1','obstacle_infra2','obstacle_need1','obstacle_need2','obstacle_other1','obstacle_other2','obstacle_other3']]
