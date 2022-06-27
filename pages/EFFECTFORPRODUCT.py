@@ -52,7 +52,7 @@ def EDA():
 
                 st.plotly_chart(fig)
 st.set_page_config(page_title="EFFECT OF INNOVATION", page_icon="📈")
-st.markdown("FFECT OF INNOVATION ANALYSIS")
+st.markdown("EFFECT OF INNOVATION ANALYSIS")
 st.header(
         """Factors Affecting Innovation Activities by Degree of Importance""")
 EDA()  
