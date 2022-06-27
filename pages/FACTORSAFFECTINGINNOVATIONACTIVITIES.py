@@ -36,7 +36,7 @@ def EDA():
     'obstacle_knowledge3','obstacle_knowledge4','obstacle_market1','obstacle_market2','obstacle_market3','obstacle_market4','obstacle_market5',
     'obstacle_infra1','obstacle_infra2','obstacle_need1','obstacle_need2','obstacle_other1','obstacle_other2','obstacle_other3']]
             df2.replace({'3':'High','2':'Medium','1':'Low','0':'Not experienced',' ':'Unspecified'},inplace=True)
-            if st.checkbox('Obstacle - lack of in-house funds'):
+             if st.checkbox('Obstacle - lack of in-house funds'):
                     fig = px.histogram(df2, x="obstacle_cost1", color="obstacle_cost1",width=800, height=600)
                     fig.update_layout(margin= dict(l=20, r=20, t=20, b=20),
                                                         paper_bgcolor="#202A44",)
