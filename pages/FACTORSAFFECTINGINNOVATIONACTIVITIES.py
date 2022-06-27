@@ -9,27 +9,27 @@ def EDA():
     select = st.sidebar.selectbox("FACTORS AFFECTING INNOVATION ACTIVITIES",['FACTORS AFFECTING INNOVATION ACTIVITIES'],key =1)
     if select == 'FACTORS AFFECTING INNOVATION ACTIVITIES':
         df21 = pd.read_csv('obstacle.csv')
-        df21.replace({'obstacle_cost1':'Obstacle - lack of in-house funds',
-            'obstacle_cost2':'Obstacle - lack of external financing',
-            'obstacle_cost3':'Obstacle - high costs of innovation',
-            'obstacle_cost4':'Obstacle - economic risk',
-            'obstacle_cost5':'Obstacle - expensive environment-friendly R&D',
-            'obstacle_knowledge1':'Obstacle - lack of qualified personnel',
-            'obstacle_knowledge2':'Obstacle - lack of tech information',
-            'obstacle_knowledge3':'Obstacle - lack of market information',
-            'obstacle_knowledge4':'Obstacle - difficult to find coop partners',
-            'obstacle_market1':'Obstacle - mkt dominated by large ent.',
-            'obstacle_market2':'Obstacle - uncertain demand',
-            'obstacle_market3':'Obstacle - mkt dominated by foreign substitutes',
-            'obstacle_market4':'Obstacle - consumers unwilling to pay',
-            'obstacle_market5':'Obstacle - imitation',
-            'obstacle_infra1':'Obstacle - poor basic infrastructure',
-            'obstacle_infra2':'Obstacle - inadequate facilities',
-            'obstacle_need1':'Obstacle - no need due to prior innovation',
-            'obstacle_need2':'Obstacle - no need due to no demand for innovation',
-            'obstacle_other1':'Obstacle - internal organisational rigidities',
-            'obstacle_other2':'Obstacle - inflexible regulations/standards',
-            'obstacle_other3':'Obstacle - limitation of S&T public policies'},inplace=True) 
+        df21.replace({'obstacle_cost1':'Lack of in-house funds',
+            'obstacle_cost2':'Lack of external financing',
+            'obstacle_cost3':'High costs of innovation',
+            'obstacle_cost4':'Eeconomic risk',
+            'obstacle_cost5':'Expensive environment-friendly R&D',
+            'obstacle_knowledge1':'Lack of qualified personnel',
+            'obstacle_knowledge2':'Lack of tech information',
+            'obstacle_knowledge3':'Lack of market information',
+            'obstacle_knowledge4':'Difficult to find coop partners',
+            'obstacle_market1':'Mkt dominated by large ent.',
+            'obstacle_market2':'Uncertain demand',
+            'obstacle_market3':'Mkt dominated by foreign substitutes',
+            'obstacle_market4':'Consumers unwilling to pay',
+            'obstacle_market5':'Imitation',
+            'obstacle_infra1':'Poor basic infrastructure',
+            'obstacle_infra2':'Inadequate facilities',
+            'obstacle_need1':'No need due to prior innovation',
+            'obstacle_need2':'No need due to no demand for innovation',
+            'obstacle_other1':'Internal organisational rigidities',
+            'obstacle_other2':'Inflexible regulations/standards',
+            'obstacle_other3':'Iimitation of S&T public policies'},inplace=True) 
         st.table(df21)
         if st.checkbox('FACTORS AFFECTING INNOVATION ACTIVITIES CHART'):
             df2 = df[['obstacle_cost1','obstacle_cost2','obstacle_cost3','obstacle_cost4','obstacle_cost5','obstacle_knowledge1','obstacle_knowledge2','obstacle_knowledge3','obstacle_knowledge4','obstacle_market1','obstacle_market2','obstacle_market3','obstacle_market4','obstacle_market5','obstacle_infra1','obstacle_infra2','obstacle_need1','obstacle_need2','obstacle_other1','obstacle_other2','obstacle_other3']]
