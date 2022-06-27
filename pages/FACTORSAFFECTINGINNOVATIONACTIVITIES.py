@@ -161,7 +161,7 @@ def EDA():
                     fig.update_layout(margin= dict(l=20, r=20, t=20, b=20),
                                                     paper_bgcolor="#202A44",)
 
-                st.plotly_chart(fig)
+                    st.plotly_chart(fig)
 st.set_page_config(page_title="FACTORS AFFECTING INNOVATION ACTIVITIES", page_icon="📈")
 st.markdown("#FACTORS AFFECTING INNOVATION ACTIVITIES ANALYSIS")
 st.header(
