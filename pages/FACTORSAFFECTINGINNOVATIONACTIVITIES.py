@@ -32,10 +32,10 @@ def EDA():
             'obstacle_other3':'Obstacle - limitation of S&T public policies'},axis =1,inplace=True) 
          st.table(df21)
          if st.checkbox('FACTORS AFFECTING INNOVATION ACTIVITIES CHART'):
-            df2 = df[['obstacle_cost1','obstacle_cost2','obstacle_cost3','obstacle_cost4','obstacle_cost5','obstacle_knowledge1','obstacle_knowledge2',
+             df2 = df[['obstacle_cost1','obstacle_cost2','obstacle_cost3','obstacle_cost4','obstacle_cost5','obstacle_knowledge1','obstacle_knowledge2',
     'obstacle_knowledge3','obstacle_knowledge4','obstacle_market1','obstacle_market2','obstacle_market3','obstacle_market4','obstacle_market5',
     'obstacle_infra1','obstacle_infra2','obstacle_need1','obstacle_need2','obstacle_other1','obstacle_other2','obstacle_other3']]
-            df2.replace({'3':'High','2':'Medium','1':'Low','0':'Not experienced',' ':'Unspecified'},inplace=True)
+             df2.replace({'3':'High','2':'Medium','1':'Low','0':'Not experienced',' ':'Unspecified'},inplace=True)
              if st.checkbox('Obstacle - lack of in-house funds'):
                     fig = px.histogram(df2, x="obstacle_cost1", color="obstacle_cost1",width=800, height=600)
                     fig.update_layout(margin= dict(l=20, r=20, t=20, b=20),
