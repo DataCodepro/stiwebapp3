@@ -7,7 +7,7 @@ import plotly.express as px
 def EDA():
     df = pd.read_csv('nigeria-innovation.csv')
     select = st.sidebar.selectbox("FACTORS AFFECTING INNOVATION ACTIVITIES",['FACTORS AFFECTING INNOVATION ACTIVITIES'],key =1)
-    if select == 'TABLE':
+    if select == 'FACTORS AFFECTING INNOVATION ACTIVITIES':
         df21 = pd.read_csv('obstacle.csv')
         df21.rename({'obstacle_cost1':'Obstacle - lack of in-house funds',
             'obstacle_cost2':'Obstacle - lack of external financing',
