@@ -6,11 +6,12 @@ import seaborn as sns
 import plotly.express as px
 def EDA():
     df = pd.read_csv('nigeria-innovation.csv')
-    select = st.sidebar.selectbox("INFORMATION SOURCE",['TABLE'],key =1)
-    if select == 'TABLE':
+    select = st.sidebar.selectbox("EFFECT OF INNOVATION",['EFFECT OF INNOVATION'],key =1)
+    if select == 'EFFECT OF INNOVATION':
         df2 = pd.read_csv('effect.csv')
-        df2.rename({'ieffect_org1':'Effect of innovation (organisational) - reduced response time to customer needs',
-            'ieffect_org2':'Effect of innovation (organisational) - improved quality of goods/services','ieffect_org3':'Effect of innovation (organisational) - reduced costs per unit output','ieffect_org4':'Effect of innovation (organisational) - improved staff satisfaction/reduced turn','ieffect_org5':'Effect of innovation (organisational) - increased or maitained market share'},axis = 1,inplace=True)
+        df2.replace({'ieffect_org1':'Reduced response time to customer needs',
+            'ieffect_org2':'Improved quality of goods/services','ieffect_org3':'Reduced costs per unit output',
+                    'ieffect_org4':'Improved staff satisfaction/reduced turn','ieffect_org5':'Increased or maitained market share'},inplace=True)
         st.table(df2)
         if st.checkbox('Effect of innovation Chart'):
             df4=df[['ieffect_org1',
@@ -50,8 +51,8 @@ def EDA():
                                                 paper_bgcolor="#202A44",)
 
                 st.plotly_chart(fig)
-st.set_page_config(page_title="Effect of innovation", page_icon="📈")
-st.markdown("#Effect of innovation analysis")
+st.set_page_config(page_title="EFFECT OF INNOVATION", page_icon="📈")
+st.markdown("EFFECT OF INNOVATION ANALYSIS")
 st.header(
-        """Effect of innovation analysis""")
+        """EFFECT OF INNOVATION ANALYSIS""")
 EDA()  
