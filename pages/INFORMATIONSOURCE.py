@@ -6,8 +6,8 @@ import seaborn as sns
 import plotly.express as px
 def EDA():
     df = pd.read_csv('nigeria-innovation.csv')
-    select = st.sidebar.selectbox("INFORMATION SOURCE",['TABLE'],key =1)
-    if select == 'TABLE':
+    select = st.sidebar.selectbox("INFORMATION SOURCE",['INFORMATION SOURCE'],key =1)
+    if select == 'INFORMATION SOURCE':
         df101 = pd.read_csv('infosource.csv')
         df101.replace({'sinfo1':'Information source - Internal','sinfo2':'Information source - Suppliers','sinfo3':'Information source - Customers','sinfo4':'Information source - Competitors','sinfo5':'Information source - Consultants, commercial labs or private R&D institutes','sinfo6':'Information source - Universities, other higher ed. Institutions','sinfo7':'Information source - Public research institutes','sinfo8':'Information source - Conferences, fairs, exhibitions','sinfo9':'Information source - Journals, trade publications','sinfo10':'Information source - Professional, industry associations'},inplace=True)
         st.table(df101)
