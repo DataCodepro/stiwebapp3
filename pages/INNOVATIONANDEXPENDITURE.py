@@ -25,5 +25,5 @@ def EDA():
 st.set_page_config(page_title="Innovation and total expendiure", page_icon="📈")
 st.markdown("#INNOVATION ACTIVITIES AGAINST TOTAL EXPENDITURE ANALYSIS")
 st.header(
-        """Innovation and total expendiureINNOVATION ACTIVITIES AGAINST TOTAL EXPENDITURE ANALYSIS""")
+        """INNOVATION ACTIVITIES AGAINST TOTAL EXPENDITURE ANALYSIS""")
 EDA()   
