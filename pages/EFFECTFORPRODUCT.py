@@ -13,7 +13,7 @@ def EDA():
             'ieffect_org2':'Improved quality of goods/services','ieffect_org3':'Reduced costs per unit output',
                     'ieffect_org4':'Improved staff satisfaction/reduced turn','ieffect_org5':'Increased or maitained market share'},inplace=True)
         st.table(df2)
-        if st.checkbox('Effect of innovation Chart'):
+        if st.checkbox('FACTORS AFFECTING INNOVATION ACTIVITIES CHART'):
             df4=df[['ieffect_org1',
     'ieffect_org2',
     'ieffect_org3',
@@ -54,5 +54,5 @@ def EDA():
 st.set_page_config(page_title="EFFECT OF INNOVATION", page_icon="📈")
 st.markdown("EFFECT OF INNOVATION ANALYSIS")
 st.header(
-        """Factors Affecting Innovation Activities by Degree of Importance""")
+        """FACTORS AFFECTING INNOVATION ACTIVITIES BY DEGREE OF IMPORTANCE""")
 EDA()  
