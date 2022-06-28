@@ -16,7 +16,7 @@ def EDA():
             df7 = pd.read_excel('output.xlsx',sheet_name='Sheet3')
             df7.drop('Unnamed: 0',axis = 1,inplace =True)
             fig = px.scatter(df7, x="No of Innovations Engagement", y="Total Expenditure",size="Total Expenditure", color="Types of Selected R&D by  Enterprise",hover_name="Types of Selected R&D by  Enterprise"
-                    , log_x=True, size_max=60)
+                    , log_x=True, size_max=60,width=800,height=600)
             st.plotly_chart(fig)
 
        
