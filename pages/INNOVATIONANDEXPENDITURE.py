@@ -8,7 +8,6 @@ def EDA():
     df = pd.read_csv('nigeria-innovation.csv')
     select = st.sidebar.selectbox("INNOVATION ACTIVITIES AGAINST TOTAL EXPENDITURE",['INNOVATION ACTIVITIES AGAINST TOTAL EXPENDITURE'],key =1)
     if select == 'INNOVATION ACTIVITIES AGAINST TOTAL EXPENDITURE':
-        #st.wtite('INNOVATION ACTIVITIES AGAINST TOTAL EXPENDITURE')
         df2 =  pd.read_excel('output.xlsx',sheet_name = 'Sheet3')
         df2.rename({'Unnamed: 0':'x'},axis =1,inplace=True)
         df2.drop('x',axis = 1,inplace=True)
