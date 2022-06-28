@@ -9,7 +9,7 @@ def EDA():
     select = st.sidebar.selectbox("SUPPORT POLICY PROGRAM",['TABLE'],key =1)
     if select == 'TABLE':
         df2 = pd.read_csv('policy.csv')
-        df2.rename({'Unnamed: 0':'POLICY',0:'OUTCOME1',1:'OUTCOME2',2:'OUTCOME3',3:'OUTCOME4',4:'OUTCOME5'},axis=1,inplace=True)
+        df2.rename({'Unnamed: 0':'POLICY','0':'OUTCOME1','1':'OUTCOME2','2':'OUTCOME3','3':'OUTCOME4','4':'OUTCOME5'},axis=1,inplace=True)
         df2.replace({'policysup1':'Importance of govt support policy/prog - R&D funding',
             'policysup2':'Importance of govt support policy/prog - Training',
             'policysup3':'Importance of govt support policy/prog - Subsidies',
