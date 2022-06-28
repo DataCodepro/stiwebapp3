@@ -6,8 +6,8 @@ import seaborn as sns
 import plotly.express as px
 def EDA():
     df = pd.read_csv('nigeria-innovation.csv')
-    select = st.sidebar.selectbox("SUPPORT POLICY PROGRAM",['TABLE'],key =1)
-    if select == 'TABLE':
+    select = st.sidebar.selectbox("SUPPORT POLICY PROGRAM",['SUPPORT POLICY PROGRAM'],key =1)
+    if select == 'SUPPORT POLICY PROGRAM':
         df2 = pd.read_csv('policy.csv')
         df2.rename({'Unnamed: 0':'POLICY','0':'OUTCOME1','1':'OUTCOME2','2':'OUTCOME3','3':'OUTCOME4','4':'OUTCOME5'},axis=1,inplace=True)
         df2.replace({'policysup1':'Importance of govt support policy/prog - R&D funding',
