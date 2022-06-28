@@ -6,20 +6,15 @@ import seaborn as sns
 import plotly.express as px
 def EDA():
     df = pd.read_csv('nigeria-innovation.csv')
-    select = st.sidebar.selectbox("TABLE REPORT ANALYSIS",['TABLE'],key =1)
-    if select == 'TABLE':
-        st.subheader('Internal R&D Against Innovation Activities  wheather it is Continuous OR Occational')
+    select = st.sidebar.selectbox("INTERNAL R&D AGAINST INNOVATION ACTIVITIES  WHEATHER IT IS CONTINUOUS OR OCCATIONAL",['INTERNAL R&D AGAINST INNOVATION ACTIVITIES  WHEATHER IT IS CONTINUOUS OR OCCATIONAL'],key =1)
+    if select == 'INTERNAL R&D AGAINST INNOVATION ACTIVITIES  WHEATHER IT IS CONTINUOUS OR OCCATIONAL':
+        st.subheader('INTERNAL R&D AGAINST INNOVATION ACTIVITIES  WHEATHER IT IS CONTINUOUS OR OCCATIONAL')
         d3 = {
     'Continuous R&D':[147,284],
     'Occassional R&D':[284,147]
 }
         ITCRDORD = pd.DataFrame(d3,index = ['YES','NO'])
         st.table(ITCRDORD)
-        if st.checkbox('Innovation Activities Against Their Total Expenditure'):
-            df2 =  pd.read_excel('output.xlsx',sheet_name = 'Sheet3')
-            df2.rename({'Unnamed: 0':'x'},axis =1,inplace=True)
-            df2.drop('x',axis = 1,inplace=True)
-            st.table(df2)
         if st.checkbox('Continuous OR Occational RandD'):
             df = pd.read_excel('randd.xlsx')
             df2 = df[['iact1','crd','ord']]
@@ -42,7 +37,7 @@ def EDA():
                 fig = px.funnel(ITCRDORD, x="Outcome", y="Occassional R&D")
                 st.plotly_chart(fig)
 st.set_page_config(page_title="TABLE", page_icon="📈")
-st.markdown("#TABLE REPORT ANALYSIS")
+st.markdown("#INTERNAL R&D AGAINST INNOVATION ACTIVITIES  WHEATHER IT IS CONTINUOUS OR OCCATIONAL ANALYSIS")
 st.header(
-        """This TABLE ANALYSIS REPORT""")
+        """INTERNAL R&D AGAINST INNOVATION ACTIVITIES  WHEATHER IT IS CONTINUOUS OR OCCATIONAL ANALYSIS""")
 EDA()   
