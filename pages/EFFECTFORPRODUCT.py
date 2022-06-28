@@ -13,7 +13,7 @@ def EDA():
             'ieffect_org2':'Improved quality of goods/services','ieffect_org3':'Reduced costs per unit output',
                     'ieffect_org4':'Improved staff satisfaction/reduced turn','ieffect_org5':'Increased or maitained market share'},inplace=True)
         st.table(df2)
-        if st.checkbox('FACTORS AFFECTING INNOVATION ACTIVITIES CHART'):
+        if st.checkbox('OUTCOMES AND EFFECT FOR PRODUCTS CHART'):
             df4=df[['ieffect_org1',
     'ieffect_org2',
     'ieffect_org3',
@@ -52,7 +52,7 @@ def EDA():
 
                 st.plotly_chart(fig)
 st.set_page_config(page_title="EFFECT OF INNOVATION", page_icon="📈")
-st.markdown("EFFECT OF INNOVATION ANALYSIS")
+st.markdown("OUTCOMES AND EFFECT FOR PRODUCTS BASED ON THEIR LEVEL OF SUCCESSANALYSIS")
 st.header(
-        """FACTORS AFFECTING INNOVATION ACTIVITIES BY DEGREE OF IMPORTANCE""")
+        """OUTCOMES AND EFFECT FOR PRODUCTS BASED ON THEIR LEVEL OF SUCCESS""")
 EDA()  
